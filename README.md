@@ -6,7 +6,10 @@ Unity asset that provides a basic interface for creating game object pools.
 A game object pool is a collection of similar game objects that you recycle instead of creating and 
 destroying new game objects all the time. Creating and destroying objects during runtime is quite expensive and
 can cause lag on devices. 
-
+### Installation
+* Download the [asset](https://github.com/frispgames/frisp-object-pooling-asset/raw/master/package/frisp-object-pooling.unitypackage)
+* Import into unity via: Assets -> Import Package -> Custom Package
+* 
 ### Example
 Class for dropping objects from an empty:
 ```csharp
