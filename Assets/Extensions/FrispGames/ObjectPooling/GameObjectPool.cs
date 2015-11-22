@@ -40,11 +40,17 @@ namespace FrispGames.ObjectPooling {
 		}
 		
 		public GameObject GetObject() {
+			GameObject obj;
+
 			if (_objectPool.Count > 0) {
-				return _objectPool.Dequeue ();
+				obj =  _objectPool.Dequeue ();
 			} else {
-				return Object.Instantiate(RandomObjectToPool());
+				obj = Object.Instantiate(RandomObjectToPool());
 			}
+
+			obj.SetActive (true);
+
+			return obj;
 		}
 		
 		public void RecycleObject(GameObject obj) {

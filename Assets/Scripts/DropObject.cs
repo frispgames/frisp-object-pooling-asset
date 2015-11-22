@@ -7,7 +7,7 @@ public class DropObject : MonoBehaviour {
 
 	private GameObjectPool _objectPool;
 
-	public GameObject[] objectsToPool;
+	public GameObject[] ObjectsToPool;
 	public int PoolSize;
 	public string PoolTag;
 
@@ -24,6 +24,5 @@ public class DropObject : MonoBehaviour {
 	private void Drop () {
 		GameObject obj = _objectPool.GetObject ();
 		obj.transform.position = transform.position;
-		obj.SetActive (true);
 	}
 }
