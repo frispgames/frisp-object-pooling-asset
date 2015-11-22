@@ -2,7 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 
-namespace FrispGames {
+namespace FrispGames.ObjectPooling {
 	public class GameObjectPool {
 		
 		private static Dictionary<string, GameObjectPool> _poolCache = new Dictionary<string, GameObjectPool> ();

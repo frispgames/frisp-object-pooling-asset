@@ -1,16 +1,18 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+using GameObjectPool = FrispGames.ObjectPooling.GameObjectPool;
+
 public class DropObject : MonoBehaviour {
 
-	private FrispGames.GameObjectPool _objectPool;
+	private GameObjectPool _objectPool;
 
 	public GameObject[] objectsToPool;
 	public int PoolSize;
 	public string PoolTag;
 
 	void Start () {
-		this._objectPool = FrispGames.GameObjectPool.CreatePool(objectsToPool, PoolSize, PoolTag);
+		this._objectPool = GameObjectPool.CreatePool(objectsToPool, PoolSize, PoolTag);
 	}
 	
 	void Update () {
